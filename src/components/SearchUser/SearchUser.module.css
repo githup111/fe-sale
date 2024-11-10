@@ -2,15 +2,19 @@
 .search_container {
     height: 100%;
     border: 1px solid #ddd;
+    /* Màu viền nhẹ */
     width: 30%;
-    /* Can be adjusted for responsiveness */
+    /* Đổi chiều rộng để bố cục cân đối */
     display: flex;
     flex-direction: column;
     align-items: center;
+    /* Căn giữa các thành phần */
     padding: 20px;
     background-color: #f9f9f9;
     border-radius: 8px;
+    /* Bo góc cho thẻ cha */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    /* Bóng đổ nhẹ */
     transition: all 0.3s ease;
 }
 
@@ -18,33 +22,43 @@
 .search_box {
     width: 100%;
     height: 50px;
+    /* Tăng chiều cao để dễ nhìn */
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px 15px;
     margin-bottom: 20px;
+    /* Tạo khoảng cách với phần kết quả */
     border-radius: 5px;
     background-color: #fff;
+    /* Màu nền trắng cho search box */
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    /* Hiệu ứng bóng đổ nhẹ */
 }
 
-/* Input tìm kiếm */
 .search_input {
     width: 80%;
     height: 80%;
     background-color: #97cdef;
+    /* Màu nền nhẹ cho input */
     color: black;
     border: 1px solid #ccc;
+    /* Viền nhẹ */
     border-radius: 5px;
     padding: 10px;
     font-size: 14px;
     transition: all 0.3s ease;
+    color: black;
 }
 
+/* Hiệu ứng khi input được focus */
 .search_input:focus {
     border-color: #4CAF50;
+    /* Đổi màu viền khi focus */
     box-shadow: 5px 5px 5px red;
+    /* Hiệu ứng bóng sáng */
     outline: none;
+    /* Loại bỏ outline mặc định */
 }
 
 .search_icon {
@@ -53,12 +67,13 @@
     transition: transform 0.3s ease, opacity 0.3s ease;
 }
 
+/* Hiệu ứng hover cho icon */
 .search_icon:hover {
     scale: 1.6;
     opacity: 0.8;
 }
 
-/* Kết quả tìm kiếm */
+/* Phần kết quả tìm kiếm */
 .display_user_item {
     width: 100%;
     padding: 10px;
@@ -73,6 +88,7 @@
 
 .display_user_item:hover {
     transform: translateX(10px);
+    /* Di chuyển nhẹ sang phải khi hover */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
@@ -82,53 +98,4 @@
     font-weight: bold;
     color: #333;
     margin-left: 15px;
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    .search_container {
-        width: 80%;
-        padding: 15px;
-    }
-
-    .search_box {
-        height: 45px;
-        padding: 5px 10px;
-    }
-
-    .search_input {
-        width: 75%;
-        font-size: 12px;
-    }
-
-    .search_icon {
-        scale: 1.3;
-    }
-
-    .display_user_item {
-        padding: 8px;
-    }
-}
-
-@media (max-width: 480px) {
-    .search_container {
-        width: 90%;
-    }
-
-    .search_input {
-        font-size: 12px;
-        padding: 8px;
-    }
-
-    .search_icon {
-        scale: 1.2;
-    }
-
-    .display_user_item {
-        padding: 8px;
-    }
-
-    .nickName {
-        font-size: 14px;
-    }
 }

@@ -1,236 +1,205 @@
-@media (max-width: 1024px) {
-
-    /* Tablets and smaller devices */
-    .account-container {
-        background-size: cover;
-        /* Ensure background image is responsive */
-        background-position: center;
-    }
-
-    .workplace {
-        height: 100%;
-        padding: 0 20px;
-    }
-
-    .status-container {
-        height: auto;
-        transform: rotate(0deg);
-        /* Remove rotation on smaller screens */
-        right: 0;
-        bottom: 0;
-        width: 100%;
-        /* Full width on tablets */
-        margin-top: 20px;
-    }
-
-    .account-status {
-        width: 100%;
-        height: auto;
-        margin-top: 20px;
-        margin-left: 0;
-        transform: rotate(0deg);
-        display: block;
-        justify-content: center;
-    }
-
-    .input {
-        width: 100%;
-        flex-direction: column;
-        gap: 20px;
-        opacity: 1;
-        /* Ensure the inputs are visible */
-    }
-
-    .nickname-container,
-    .other-container {
-        width: 100%;
-        /* Full width for inputs */
-        height: auto;
-        padding: 15px;
-        margin-top: 20px;
-        border-right: none;
-    }
-
-    .nickname-container input,
-    .other-container input {
-        width: 100%;
-        /* Make inputs fill the available width */
-    }
-
-    .btn-container {
-        flex-direction: column;
-        gap: 20px;
-    }
-
-    .save,
-    .link,
-    .update-nickname {
-        width: 100%;
-        /* Full-width buttons */
-        margin-top: 10px;
-    }
-
-    .account-infor {
-        width: 100%;
-        /* Full width on mobile */
-        position: static;
-        padding-left: 30px;
-        padding-right: 30px;
-    }
-
-    .account-infor p {
-        text-align: left;
-    }
-
-    .account-infor button {
-        width: 100%;
-        margin-top: 20px;
-    }
+.account-container {
+    width: 100%;
+    height: 100%;
+    background-image: url('../../assets/lolbackground.jpg');
+    opacity: 1;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    position: relative;
 }
 
-@media (max-width: 768px) {
-
-    /* Mobile devices */
-    .account-container {
-        background-size: contain;
-        /* Ensure background scales well */
-    }
-
-    .status-container {
-        height: auto;
-        margin-top: 20px;
-        transform: rotate(0deg);
-        width: 100%;
-        /* Make it fill the screen width */
-        right: 0;
-        bottom: 0;
-    }
-
-    .account-status {
-        margin-left: 0;
-        width: 100%;
-        transform: rotate(0deg);
-        /* Remove any rotation */
-    }
-
-    .input {
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .nickname-container,
-    .other-container {
-        width: 100%;
-        /* Full width for mobile screens */
-        height: auto;
-        padding: 10px;
-    }
-
-    .nickname-container input,
-    .other-container input {
-        width: 100%;
-        padding: 10px;
-    }
-
-    .btn-container {
-        flex-direction: column;
-        gap: 15px;
-        padding-left: 0;
-        padding-right: 0;
-    }
-
-    .save,
-    .link,
-    .update-nickname {
-        width: 100%;
-    }
-
-    .account-infor {
-        width: 100%;
-        padding: 10px;
-        margin-top: 20px;
-        position: static;
-    }
-
-    .account-infor button {
-        width: 100%;
-        margin-top: 15px;
-    }
+.nav {
+    width: 20%;
+    height: 85%;
+    position: absolute;
+    z-index: 1;
+    top: 117px;
+    transition: 1s;
 }
 
-@media (max-width: 480px) {
+.workplace {
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    right: 0px;
+    overflow: hidden;
+    transition: right 2s ease-in-out;
+}
 
-    /* Smaller screens like mobile phones */
-    .account-container {
-        background-size: cover;
-        /* Adjust the background to fit */
-        background-position: center;
-    }
+.status-container {
+    height: 150%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.229);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    transform: rotate(16deg);
+    position: absolute;
+    right: -500px;
+    bottom: -170px;
+    border: 5px solid #ADFF2F;
+    overflow: hidden;
 
-    .status-container {
-        height: auto;
-        transform: rotate(0deg);
-        /* No rotation for mobile */
-        width: 100%;
-        margin-top: 20px;
-    }
+}
 
-    .account-status {
-        width: 100%;
-        margin-left: 0;
-        margin-top: 20px;
-        transform: rotate(0deg);
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+.account-status {
+    width: 60%;
+    height: 60%;
+    margin-top: 25%;
+    margin-left: 6%;
+    transform: rotate(-16deg);
+    display: flex;
+    justify-content: space-between;
+}
 
-    .input {
-        flex-direction: column;
-        gap: 15px;
-        width: 100%;
-    }
+.input {
+    width: 100%;
+    height: 90%;
+    display: flex;
+    transition: 1s ease-in-out;
+    gap: 20px;
+    position: relative;
+    opacity: 0;
+}
 
-    .nickname-container,
-    .other-container {
-        width: 100%;
-        padding: 15px;
-        margin-top: 20px;
-        height: auto;
-    }
+.nickname-container {
+    width: 40%;
+    height: 32%;
+    background-color: #211E1F;
+    padding-top: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 100px;
+    border-right: 5px solid #B73961;
+}
 
-    .nickname-container input,
-    .other-container input {
-        width: 100%;
-        /* Full-width inputs */
-    }
+.other-container {
+    width: 60%;
+    height: 52%;
+    background-color: #211E1F;
+    padding-top: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 100px;
+    border-right: 5px solid #B73961;
+}
 
-    .btn-container {
-        flex-direction: column;
-        gap: 15px;
-        padding-left: 0;
-        padding-right: 0;
-    }
+.nickname-container>p,
+.other-container>p {
+    color: white;
+    font-size: 20px;
+    font-family: "teko";
+    margin-left: 10px;
+    text-align: center;
+}
 
-    .save,
-    .link,
-    .update-nickname {
-        width: 100%;
-        margin-top: 10px;
-    }
+.nickname-container>p>a,
+.other-container>p>a {
+    color: rgb(249, 83, 83);
+    padding-left: 5px;
+    font-family: "Roboto"
+}
 
-    .account-infor {
-        width: 100%;
-        padding: 10px;
-        position: static;
-    }
+.nickname-container>input,
+.other-container>input {
+    height: 50px;
+    background-color: #333131;
+    border: none;
+}
 
-    .account-infor p {
-        text-align: left;
-    }
+.nickname-container>input:focus,
+.other-container>input:focus {
+    outline: none;
+}
 
-    .account-infor button {
-        width: 100%;
-        margin-top: 15px;
-    }
+.nickname-container>button {
+    margin-top: 10px;
+    margin-left: 95px;
+}
+
+.btn-container {
+    width: 100%;
+    height: 50px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+.save,
+.link,
+.update-nickname {
+    height: 50px;
+    width: 100px;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    color: white;
+    transition: 0.5s;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+.save:hover,
+.link:hover,
+.update-nickname:hover {
+    border-radius: 0;
+    scale: 1.05;
+    opacity: .8;
+}
+
+.save {
+    background-color: #E8554E;
+}
+
+.link {
+    background-color: #d9138a;
+}
+
+.update-nickname {
+    background-color: #5c3c92;
+}
+
+.account-infor {
+    width: 358.08px;
+    height: 127.93px;
+    position: absolute;
+    top: 310px;
+    left: 558px;
+    background-color: #211E1F;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-right: 5px solid #B73961;
+}
+
+.account-infor>p {
+    color: white;
+    font-family: 'teko';
+    font-size: 25px;
+    text-align: center;
+}
+
+.account-infor>button {
+    height: 50px;
+    width: 100px;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    color: white;
+    transition: 0.5s;
+    border-top-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    background-color: #fcca46;
+    margin-top: 10px;
+    margin-left: 100px;
+}
+
+.account-infor>button:hover {
+    border-radius: 0;
 }

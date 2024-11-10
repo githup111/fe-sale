@@ -1,23 +1,19 @@
-/* General Container Styling */
 .product-container {
     width: 100%;
     height: 100%;
     position: relative;
 }
 
-/* Navbar Styling */
 .nav {
     width: 20%;
     height: 85%;
     position: absolute;
     z-index: 1;
     top: 117px;
-    left: 0;
     transition: 1s;
     position: fixed;
 }
 
-/* Main Workplace Styling */
 .workplace {
     width: 100%;
     height: 100%;
@@ -26,7 +22,6 @@
     flex-direction: column;
 }
 
-/* Navigation Bar for Product Types */
 .product-nav {
     width: 79.83%;
     height: 8%;
@@ -35,10 +30,6 @@
     top: 120px;
     right: 0;
     border-left: 3px solid #89C834;
-    border-top: 3px solid #89C834;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
 }
 
 .product-nav>ul {
@@ -48,86 +39,23 @@
     align-items: center;
     width: 100%;
     height: 100%;
-    margin: 0;
 }
 
 .product-nav>ul>li {
     width: 100%;
     height: 100%;
     text-align: center;
-    padding: 10px;
-    box-sizing: border-box;
-    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-/* Hover Effect for Menu Items */
 .product-nav>ul>li:hover {
-    background-color: #6B8E23;
-    /* A highlight green color */
+    /* background-color: brown; */
     cursor: pointer;
-    transform: scale(1.05);
 }
 
-/* Selected State Styling */
-.product-nav>ul>li.selected {
-    background-color: #4B8B3A;
-}
-
-/* Menu Text Styling */
 .product-nav>ul>li>p {
     color: white;
-    line-height: 62px;
+    line-height: 62.08px;
+    padding: 0;
     margin: 0;
     cursor: pointer;
-    font-weight: 600;
-}
-
-/* Responsive Design for Mobile and Small Screens */
-@media (max-width: 768px) {
-    .nav {
-        width: 50%;
-    }
-
-    .product-nav {
-        flex-direction: column;
-        height: auto;
-        top: 100px;
-    }
-
-    .product-nav>ul {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .product-nav>ul>li {
-        width: 100%;
-        text-align: left;
-        padding: 15px;
-    }
-
-    .product-nav>ul>li>p {
-        font-size: 1em;
-        padding-left: 20px;
-    }
-}
-
-@media (max-width: 480px) {
-    .nav {
-        width: 60%;
-    }
-
-    .product-nav>ul {
-        flex-direction: column;
-        width: 100%;
-    }
-
-    .product-nav>ul>li {
-        width: 100%;
-        text-align: left;
-        padding: 12px 20px;
-    }
-
-    .product-nav>ul>li>p {
-        font-size: 0.9em;
-    }
 }

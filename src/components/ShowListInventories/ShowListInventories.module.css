@@ -1,96 +1,21 @@
-/* Wrapper containing both the list and description */
 .wrapper_listInventories {
     display: flex;
-    flex-wrap: wrap;
-    /* Ensure content wraps on smaller screens */
     min-height: 95%;
     background-color: #ac7156;
     margin-top: 50px;
-    padding: 10px;
 }
 
-/* List of inventories */
 .listInventories {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    /* Distribute inventory items evenly */
-    width: 100%;
-    margin-right: 10px;
-    /* Space between list and description */
+    width: 65%;
 }
 
-/* Description panel */
 .descriptionInventory {
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-    /* Adjust height based on content */
-    padding: 20px;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    top: 0;
-    right: 0;
-    margin-top: 20px;
-    border-radius: 8px;
+    height: 650px;
+    width: 30%;
+    position: fixed;
     z-index: 1000;
-}
-
-/* Inventory items (individual boxes) */
-.inventoryItem {
-    width: 100%;
-    height: 150px;
-    /* Adjust height based on content */
-    background-color: #fff;
-    margin: 10px;
-    padding: 10px;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-/* Hover effect for inventory items */
-.inventoryItem:hover {
-    transform: scale(1.05);
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-}
-
-/* Mobile responsiveness */
-@media (max-width: 768px) {
-    .wrapper_listInventories {
-        flex-direction: column;
-        /* Stack list and description vertically on smaller screens */
-        align-items: center;
-        /* Center align items */
-    }
-
-    .listInventories {
-        width: 100%;
-        margin-right: 0;
-        /* Remove margin on mobile */
-    }
-
-    .descriptionInventory {
-        width: 90%;
-        /* Make description take up more space on mobile */
-        margin-top: 20px;
-        position: relative;
-        height: auto;
-    }
-}
-
-@media (max-width: 480px) {
-    .inventoryItem {
-        width: 100%;
-        /* Full width for inventory items on smaller screens */
-        height: 120px;
-        /* Reduce item height on smaller screens */
-    }
-
-    .descriptionInventory {
-        width: 100%;
-        padding: 10px;
-    }
+    top: 50px;
+    right: 10px;
 }

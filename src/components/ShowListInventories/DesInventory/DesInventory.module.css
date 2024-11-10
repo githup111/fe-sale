@@ -3,34 +3,15 @@
     width: 100%;
     min-height: 700px;
     background-color: rgb(78, 51, 51);
-    border: 1px solid black;
+    border: 1px black solid;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 20px;
-    /* Add padding for better spacing on small screens */
 }
 
-.imageInventory {
-    width: 100%;
-    max-width: 500px;
-    /* Limit max size of the image for larger screens */
-    height: auto;
-    margin: 20px;
-    background-color: #ddd;
-    /* Fallback color for images */
-    background-size: contain;
-    background-repeat: no-repeat;
-    background-position: center;
-    position: relative;
-    overflow: hidden;
-    border-radius: 10px;
-    /* Smooth out corners */
-}
 
-/* Responsive Text */
 .desText {
     overflow: auto;
     overflow-x: hidden;
@@ -39,9 +20,6 @@
     margin: 20px;
     border: 1px solid red;
     letter-spacing: 1px;
-    max-height: 200px;
-    /* Limit the height to prevent overflowing */
-    padding: 10px;
 }
 
 .desText::-webkit-scrollbar {
@@ -52,97 +30,40 @@
     height: 50px;
     width: 100%;
     font-size: 20px;
-    margin-bottom: 10px;
-    padding: 10px;
-    border-radius: 10px;
 }
 
 .price_input:focus {
     box-shadow: 5px 5px 5px red;
 }
 
-.buy_btn,
-.drop_item {
+.buy_btn {
+    background-color: rgb(219, 160, 50);
     height: 40px;
-    width: 60%;
-    /* Make buttons more flexible */
+    width: 30%;
     text-align: center;
     border-radius: 20px;
     cursor: pointer;
-    transition: 0.5s;
-    margin-top: 20px;
-}
-
-.buy_btn {
-    background-color: rgb(219, 160, 50);
+    transition: .5s;
 }
 
 .buy_btn:hover {
     box-shadow: 5px 5px 5px greenyellow;
-    opacity: 0.8;
-    scale: 1.1;
+    opacity: .8;
+    scale: 1.2;
 }
 
 .drop_item {
     background-color: rgb(208, 63, 40);
+    height: 40px;
+    width: 30%;
+    text-align: center;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: .5s;
 }
 
 .drop_item:hover {
     box-shadow: 5px 5px 5px greenyellow;
-    opacity: 0.8;
-    scale: 1.1;
-}
-
-/* Responsive Design for mobile screens */
-@media (max-width: 768px) {
-    .desWrapper {
-        min-height: 500px;
-        /* Adjust min-height for smaller screens */
-        padding: 10px;
-    }
-
-    .imageInventory {
-        max-width: 90%;
-        /* Use more screen space for the image */
-        height: 200px;
-        /* Ensure the image size is not too large */
-    }
-
-    .price_input {
-        font-size: 18px;
-        /* Slightly smaller input field on mobile */
-    }
-
-    .buy_btn,
-    .drop_item {
-        width: 80%;
-        /* Make buttons occupy more width on mobile */
-        font-size: 16px;
-        /* Adjust font size for buttons */
-    }
-
-    .desText {
-        font-size: 16px;
-        /* Scale down text for smaller screens */
-        margin: 10px;
-    }
-}
-
-/* Tablet and Larger Screens */
-@media (min-width: 769px) and (max-width: 1024px) {
-    .desWrapper {
-        min-height: 600px;
-        /* Adjust height for tablet screens */
-    }
-
-    .imageInventory {
-        max-width: 400px;
-        /* Slightly smaller image size for tablet */
-    }
-
-    .buy_btn,
-    .drop_item {
-        width: 50%;
-        /* Buttons should be more compact on tablet screens */
-    }
+    opacity: .8;
+    scale: 1.2;
 }
