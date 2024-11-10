@@ -1,26 +1,24 @@
-/* Căn chỉnh toàn bộ component để tạo cảm giác hài hòa hơn */
-
+/* General Container Styling */
 .container {
     width: 90%;
-    /* Chiếm 90% chiều rộng màn hình */
     max-width: 500px;
-    /* Giới hạn chiều rộng tối đa */
     padding: 30px;
     background-color: rgba(219, 154, 48, 0.2);
     border-radius: 10px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     font-family: Arial, sans-serif;
     color: #333;
+    margin: 0 auto;
 }
 
-/* Định dạng form với các khoảng cách giữa các thành phần */
+/* Form Layout */
 .form {
     display: flex;
     flex-direction: column;
     gap: 20px;
 }
 
-/* Nhóm input có căn chỉnh label và input theo chiều ngang */
+/* Input Group Style */
 .inputGroup {
     display: flex;
     flex-direction: column;
@@ -28,38 +26,42 @@
     margin-bottom: 15px;
 }
 
-/* Tạo kiểu input với hiệu ứng border và shadow */
+/* Input Field Styling */
 .inputGroup input {
     padding: 12px;
     border: 1px solid #ddd;
     border-radius: 8px;
     outline: none;
     transition: all 0.3s ease;
+    font-size: 16px;
 }
 
+/* Focused Input Styling */
 .input-field:focus {
     outline: none;
     border-color: white;
     box-shadow: 0 0 8px rgba(255, 255, 255, 0.8);
 }
 
+/* Input Background Color */
 .input-field {
     background-color: #756868;
 }
 
+/* Placeholder Text Styling */
 input::placeholder {
     color: #f9f9f9;
     opacity: 0.8;
 }
 
-/* Định dạng ảnh captcha để dễ nhìn hơn */
+/* Captcha Image Styling */
 .captcha-img {
     height: 40px;
     border: 1px solid #ddd;
     border-radius: 4px;
 }
 
-/* Tạo kiểu cho nút bấm và hiệu ứng hover */
+/* Submit Button Styling */
 .submitButton {
     padding: 12px;
     background-color: #007bff;
@@ -82,6 +84,7 @@ input::placeholder {
     transform: translateY(1px);
 }
 
+/* Captcha Container */
 .captcha-container {
     display: flex;
     align-items: center;
@@ -89,6 +92,7 @@ input::placeholder {
     margin-bottom: 15px;
 }
 
+/* Captcha Input */
 .captcha {
     flex: 1;
     height: 40px;
@@ -100,6 +104,7 @@ input::placeholder {
     padding-left: 12px;
 }
 
+/* Captcha Image Resizing */
 .captcha-img {
     width: 130px;
     height: 40px;
@@ -107,6 +112,7 @@ input::placeholder {
     object-fit: cover;
 }
 
+/* Captcha Reload Button */
 .captcha-btn {
     width: 40px;
     height: 40px;
@@ -122,6 +128,7 @@ input::placeholder {
     transform: rotate(360deg);
 }
 
+/* Garena Logo Styling */
 .logoGarena {
     height: 170px;
     width: 170px;
@@ -129,6 +136,7 @@ input::placeholder {
     background-size: 100% 100%;
 }
 
+/* Wrapper Styling */
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -137,60 +145,62 @@ input::placeholder {
     width: 100%;
     background-image: url("https://wallpapercave.com/wp/wp4545909.jpg");
     background-size: cover;
+    padding-top: 50px;
 }
 
-/* Media query cho responsive */
+/* Mobile Responsiveness: For smaller screens */
 @media (max-width: 768px) {
     .container {
         width: 95%;
-        /* Chiếm 95% chiều rộng trên màn hình nhỏ hơn */
         padding: 20px;
     }
 
     .captcha-img {
         width: 100px;
-        /* Giảm kích thước ảnh captcha trên màn hình nhỏ hơn */
     }
 
     .logoGarena {
         height: 120px;
-        /* Giảm kích thước logo trên màn hình nhỏ hơn */
         width: 120px;
     }
 
     .inputGroup input {
         padding: 10px;
-        /* Giảm padding cho input */
     }
 
     .submitButton {
         padding: 10px;
-        /* Giảm padding cho nút bấm */
     }
 }
 
 @media (max-width: 480px) {
     .container {
         padding: 15px;
-        /* Giảm padding cho màn hình nhỏ hơn */
     }
 
     .captcha-container {
         flex-direction: column;
-        /* Chuyển đổi chiều dọc cho captcha trên màn hình nhỏ */
         align-items: flex-start;
-        /* Căn lề cho các phần tử */
     }
 
     .captcha-img {
         width: 100%;
-        /* Chiếm 100% chiều rộng cho ảnh captcha */
         margin-top: 10px;
-        /* Thêm khoảng cách trên */
     }
 
     .captcha-btn {
         margin-top: 10px;
-        /* Thêm khoảng cách cho nút bấm */
+    }
+
+    /* Ensure form inputs take up full width */
+    .inputGroup input {
+        width: 100%;
+        padding: 10px;
+    }
+
+    /* Reduce button size for mobile screens */
+    .submitButton {
+        width: 100%;
+        padding: 12px;
     }
 }

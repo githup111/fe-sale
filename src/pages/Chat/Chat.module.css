@@ -3,4 +3,20 @@
     height: 100%;
     width: 100%;
     background-color: rgb(233, 200, 174);
+    justify-content: space-between;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .chat_Wrapper {
+        flex-direction: column;
+        padding: 5px;
+    }
+
+    /* Adjust list user and display messages components for mobile */
+    .listUserChat,
+    .displayMessages {
+        width: 100%;
+    }
 }

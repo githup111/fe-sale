@@ -1,44 +1,54 @@
+:root {
+  --primary-color: #ffffff;
+  --background-color: #000000;
+  --btn-hover-color: #18181a;
+}
+
+/* Container cho danh sách items */
 .item-list-container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
-    align-items: start;
-    margin-left: 303.84px;
-    height: 34.7%;
-    box-shadow: none;
-    padding-top: 185px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: start;
+  margin: 0 auto;
+  padding-top: 150px;
+  padding-left: 20px;
+  padding-right: 20px;
+  box-shadow: none;
+  width: 100%;
 }
 
+/* Container cho các nút điều hướng */
 .btn-container {
-    width: 300px;
-    height: 40px;
-    margin-top: 20px;
-    display: flex;
-    justify-content: space-between;
+  width: 300px;
+  height: 40px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
 }
 
+/* Button style */
 .button-57 {
   position: relative;
   overflow: hidden;
-  border: 1px solid #18181a;
-  color: white;
-  display: inline-block;
+  border: 1px solid var(--btn-hover-color);
+  color: var(--primary-color);
+  background: var(--background-color);
   font-size: 15px;
-  text-decoration: none;
   cursor: pointer;
-  background: black;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
+  text-align: center;
   width: 100px;
   height: 40px;
-  text-align: center;
+  display: inline-block;
+  user-select: none;
+  transition: all 0.3s ease;
 }
 
+/* Hiệu ứng hover cho button */
 .button-57 span:first-child {
   position: relative;
-  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
   z-index: 10;
+  transition: color 600ms cubic-bezier(0.48, 0, 0.12, 1);
 }
 
 .button-57 span:last-child {
@@ -46,13 +56,13 @@
   display: block;
   position: absolute;
   bottom: 0;
-  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
-  z-index: 100;
   opacity: 0;
   top: 50%;
   left: 50%;
-  transform: translateY(225%) translateX(-50%);
+  transform: translate(-50%, 225%);
   line-height: 40px;
+  transition: all 500ms cubic-bezier(0.48, 0, 0.12, 1);
+  z-index: 100;
 }
 
 .button-57:after {
@@ -62,20 +72,63 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: #ffffff;
+  background-color: var(--primary-color);
   transform-origin: bottom center;
-  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
   transform: skewY(9.3deg) scaleY(0);
+  transition: transform 600ms cubic-bezier(0.48, 0, 0.12, 1);
   z-index: 50;
 }
 
 .button-57:hover:after {
-  transform-origin: bottom center;
   transform: skewY(9.3deg) scaleY(2);
 }
 
 .button-57:hover span:last-child {
-  transform: translateX(-50%) translateY(-100%);
+  transform: translate(-50%, -100%);
   opacity: 1;
   transition: all 900ms cubic-bezier(0.48, 0, 0.12, 1);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .item-list-container {
+    padding-top: 100px;
+    flex-direction: column;
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .btn-container {
+    width: 80%;
+  }
+
+  .button-57 {
+    width: 80px;
+    height: 35px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .item-list-container {
+    padding-top: 80px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  .btn-container {
+    width: 100%;
+    justify-content: space-around;
+  }
+
+  .button-57 {
+    width: 70px;
+    height: 30px;
+    font-size: 13px;
+  }
+
+  .button-57 span:first-child,
+  .button-57 span:last-child {
+    font-size: 13px;
+  }
 }
